@@ -1,0 +1,44 @@
+@charset "utf-8";
+/**
+	@author: Hubert Viktor
+	@since: 2012
+	A bejelentkező oldal css szabályai.
+*/
+
+.transited (@time: .5s) {
+	-webkit-transition: all @time ease;
+	-moz-transition: all @time ease;
+	transition: all @time ease;
+}
+.rounded (@radius: 5px) {
+	border-radius: @radius;
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+}
+
+/*Nincs JS*/
+#noJS {overflow-y: auto; position: fixed; top: 0px; left: 0px; height: 100%; width: 100%; background: #FFF; text-align: center;}
+
+#login:hover, #register:hover {cursor: pointer;}
+
+/*Login kiegészítések Form-hoz*/
+#loginBox {
+	margin: 0 auto 0;
+	width: 500px;
+	.loginLeftSide {height: 100px; float: left; width: 304px;}
+	.loginRightSide {border-left: 1px solid #C5C0C7; color: #C5C0C7; padding: 15px 0px; padding-left: 10px; margin-left: 10px; margin-top: 2px; display: inline-block; width: 134px; float: left;}
+	.loginRightSide:hover {.transited(.1s); border-left: 1px solid #191919; color: #191919;}
+	.menu {margin: 2px 0px; padding-left: 5px; height: 20px; cursor: pointer;}
+	.menu:hover {.transited(.1s); border-left: 2px solid #191919;}
+}
+
+#registerBornWrapper {
+	display: inline-block; cursor: text;
+}
+
+#registerBox {
+	margin: 0 auto 0;
+	width: 400px;
+}
+#loginMenu1 { margin-top: 10px; }
+#loginMenu2, #loginMenu3 { margin-top: 25px; display: none; }

@@ -1,0 +1,212 @@
+@charset "utf-8";
+/**
+	@author: Hubert Viktor
+	@since: 2012
+	A főoldalra vonatkozó css szabályok.
+*/
+
+
+.bborder(@width: 1px) {
+	border: @width solid #000;
+}
+
+.error {
+	padding: 5px;
+	margin-left: 100px;
+}
+
+h1.logo {
+	position: absolute;
+	top: 0px;
+}
+
+body {
+	background: #000 url(../img/main_bg.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.disable {top: 0px; left: 0px; display: none; position: absolute; height: 100%; width: 100%; z-index: 11; background: #000; background: rgba(0,0,0,0.4);}
+.x {width: 20px; height: 20px; font: 16px/20px Arial, Helvetica, sans-serif; text-align: center; position: absolute; right: 5px; top: 5px;}
+.x:hover {cursor: pointer;}
+.hv-ajax-cover {background-color: #fff; background-color: rgba(0,0,0,0.6);}
+
+#newMessage {
+	background: #FFF; width: 200px; height: 20px; position: fixed; left: 0; top: 0px; border: 1px solid #000; z-index: 10; overflow: hidden;
+	.label {position: absolute; top: 0px; left: 0px; width: 100%; height: 20px; font-size: 16px; line-height: 20px; text-align: center;}
+	.label.active {background: #CFC;}
+	.label:hover {cursor: pointer;}
+	.content {
+		position: absolute; top: 20px; left: 0px; width: 100%; height: 80px; overflow: hidden; overflow-y: auto;
+		.request {
+			line-height: 20px; height: 20px; font-size: 14px; overflow: hidden; position: relative; width: 100%;
+			.accept, .decline, .ignore {position: absolute; height: 20px; width: 20px; top: 0px; text-align: center;}
+			.accept:hover, .decline:hover, .ignore:hover {border: 1px solid #000; cursor: pointer; height: 18px; width: 18px; line-height: 18px;}
+			.accept {right: 20px;}
+			.ignore {right: 0px;}
+		}
+	}
+}
+/*News*/
+#newsWrapper {
+	div {
+		padding: 10px; font-size: 12px; line-height: 16px;
+		.title {margin: 0px; margin: 5px 0px; font-weight: 600;}
+		p {text-indent: 20px;}
+		p:first-child {text-indent: 20px; font-variant: small-caps; padding: 0px; margin: 0px; margin-bottom: 10px; color: 9E0000; font-size: 18px; font-weight: 600;}
+		p:last-child {text-align: right; margin: 0px; padding: 0px; margin-top: 20px; font-size: 10px; line-height: 14px;}
+	}
+}
+
+/*Általános*/
+h1, h2, h3 {text-align: center;}
+#mainWrapper {border: 1px solid #000; margin: 10px auto 20px; width: 800px; min-height: 500px; background: #fff;}
+#banner {
+	border-bottom: 1px solid #000; text-align: right; padding: 10px 20px; height: 70px; position: relative;
+	.onProfile:hover {font-weight: 600; cursor: pointer;}
+}
+a { color: #000; text-decoration: none; }
+a:hover { font-weight: bold; }
+
+#menu {
+	text-align: center; width: 100%; border: 0px solid #000; position: absolute; top: 71px; left: 0px; height: 20px;
+	.button {
+		border: 1px solid #000; border-bottom: none; height: 18px; width: 123px; margin: 0px 2px; display: inline-block;
+		a {
+			display: block;
+			height: 100%;
+		}
+	}
+	.button:hover {cursor: pointer; font-weight: 600;}
+}
+#body {
+	div.content_wrapper {
+		width: 800px; border: none;
+		div.content_slider {
+			div.content {
+				padding-bottom: 20px;
+				div.settings_tab {
+					width: 400px; float: left; display: inline-block;
+				}
+			}
+		}
+	}
+}
+
+/*Developers*/
+div#developers_container {
+	padding: 0 50px;
+	dt {text-decoration: underline;}
+	dt:hover {cursor: pointer; font-weight: bold;}
+	a {text-decoration: none; color: #000;}
+	dd {margin-bottom: 10px; color: #877F82;}
+}
+
+/*Barátok*/
+#friendsContainer {
+	width: 582px; margin: 10px auto 10px; position: relative;
+	.search, .approvedFriends {margin: 5px auto 5px; background: #E8E1D0; border: 1px solid #292825;}
+	.search {
+		overflow: hidden;
+		form {
+			width: 580px; position: relative;
+			margin: 0;
+		}
+		input {
+			border: 1px solid #292825; height: 25px; font-size: 16px;
+			padding: 2px 5px; padding-right: 28px; margin: 10px;
+			
+			width: 560px;
+			display: block;
+			background: #FFF url('../img/chatSend.png') no-repeat right center;
+		}
+	}
+	div.close_search {z-index: 10; background: #fff; background: rgba(255,255,255,0.4); display: none; width: 20px; height: 20px; text-align: center; font-size: 12px; line-height: 20px; position: absolute; right: 5px; top: 5px;}
+	div.close_search:hover {background: rgba(255,255,255,0.8); text-decoration: underline; cursor: pointer;}
+	.approvedFriends {padding: 5px;}
+	.listedFriend {
+		background: #FFF; border: 1px solid #292825; padding: 5px; margin: 5px; height: 100px; width: 167px; display: inline-block;
+		div.button:hover {cursor: pointer; background: #EAE0EB;}
+	}
+	.foreverAlone {background: #FFF; border: 1px solid #292825; padding: 5px; margin: 5px; margin-top: 0px; height: 25px; font-size: 16px; padding: 2px 5px; width: 533px; text-align: center;}
+	
+}
+#searchResults {
+	overflow-y: scroll; margin-left: 5px; height: 0px;
+	.listedFriend {width: 163px; margin: 0px 5px 10px;}
+}
+
+/*Bugok*/
+#bugs {
+	p.intro {text-align: center;}
+	:not(h3):not(h2) {font-size: 12px;}
+	div.bugpage {
+		width: 400px; float: left; display: inline-block;
+		div.bugscroll {
+			max-height: 400px; overflow: hidden; overflow-y: auto;
+		}
+	}
+	ul {
+		li.title {
+			text-transform: uppercase; text-decoration: underline; font-weight: bold; margin-top: 10px;
+			span.subtitle {font-weight: bold;}
+		}
+	}
+	div.plans {
+		max-height: 300px; overflow-y: auto;
+	}
+}
+
+/*Játékok*/
+#gamesWrapper {
+	background: #E8E1D0; width: 602px; margin: 5px auto 5px; padding: 10px 5px;
+	.gamesRow, .gamesRowActive, .gamesRowMissingGM {border: 1px solid #292825; width: 590px; margin: 5px;}
+	.gamesRow {background: #FFF;}
+	.gamesRow:hover {background: #DEDEDE;}
+	.gamesRowActive {background: #00FF22;}
+	.gamesRowActive:hover {background: #00B818;}
+	.active {background: #00FF22;}
+	.active:hover {background: #00B818; cursor: pointer;}
+	.gamesRowMissingGM {background: #FFFE00;}
+	.gamesRowMissingGM:hover {background: #C4C400;}
+	.gamesForeverAlone {width: 590px; text-align: center;}
+	.gamesRowID {width: 60px; display: inline-block;}
+	.gamesRowTitle {width: 260px; display: inline-block;}
+	.gamesRowType {width: 160px; display: inline-block;}
+	.gamesRowStarted {width: 110px; display: inline-block;}
+}
+
+/*Új játék*/
+#newGame, #game_install {
+	/*text-align: center; height: 50px; width: 300px; overflow: hidden; margin: 10px auto 10px; border: 1px solid #000;*/
+	z-index: 5001; text-align: center; height: 305px; position: fixed; top: 50%; left: 50%; margin-left: -151px; margin-top: -162px; display: none; background: #fff; border: 1px solid #000;
+	
+	.newGameButton {cursor: pointer; text-align: center; line-height: 50px; font-size: 24px;}
+	.label {line-height: 18px; font-size: 16px;}
+	.type {text-align: left; width: 280px; margin: 5px 10px; border: 1px solid #000; height: 20px; line-height: 20px; font-size: 16px;}
+	.title {width: 280px; margin: 5px 10px; border: 1px solid #000; height: 20px; line-height: 20px; font-size: 16px;}
+	.description {width: 280px; margin: 5px 10px; height: 150px; border: 1px solid #000;}
+	input[type="button"] {width: 150px; line-height: 16px; font-size: 14px; border: 1px solid #000;}
+}
+
+#the_black_cloud {background: #CCC; background: rgba(0,0,0,0.6); display: none; z-index: 5000; position: fixed; top: 0; left: 0; width: 100%; height: 100%;}
+
+#create_install_game_btn {
+	width: 400px; margin: 10px auto 10px; text-align: center; .bborder(); height: 30px; font: bold 14px/30px Arial, Helvetica, sans-serif;
+	div {display: inline-block; float: left; width: 200px; border: none; overflow: hidden;}
+	div:first-child:hover, div:last-child:hover {background: #DEDEDE; cursor: pointer;}
+}
+/*#newGame {height: 305px; position: fixed; top: 50%; left: 50%; margin-left: -151px; margin-top: -162px; display: none; background: #fff;}*/
+#game_install {height: 100px; text-align: center; width: 300px; margin-top: -51px; overflow: hidden;}
+
+/*Közös Chat*/
+#chatSlideBox {z-index: 89; background: #E8E1D0; position: fixed; left: 0px; top: 62px; overflow: hidden; border: 1px solid #000; width: 9px; height: 300px;}
+#chatSlideBox .chatButton {cursor: pointer; background: #E8E1D0; border-right: 1px solid #000; position: absolute; top: 0px; left: 0px; width: 9px; height: 300px;}
+#chatWrapper {border: none; width: 300px; margin-left: 10px; height: 300px;}
+#chatBox {background: #FFF; border: 1px solid #292825; position: relative; font-size: 12px; line-height: 14px; width: 276px; margin: 5px; padding: 5px; height: 241px; overflow: hidden;}
+#chatMessages {width: 276px; max-height: 241px; margin: 5px 0px; position: absolute; bottom: 0px; overflow-x: hidden; overflow-y: auto;}
+#chatForm {background: #FFF; border: none; width: 286px; margin: 5px; margin-top: 0px;}
+#chatForm input {background: url('../img/chatSend.png') no-repeat 265px center; border: 1px solid #292825; width: 256px; height: 25px; font-size: 16px; padding: 2px 5px; padding-right: 25px;}
+.chatNick {color: #9E9E9E; font-weight: 600;}

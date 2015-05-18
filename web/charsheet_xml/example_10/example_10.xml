@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<charsheet>
+	
+	<base limit="1">
+		<record left_title="left">
+			<field name="name" />
+			<field name="xp" />
+			<field name="hit_points" />
+			<field name="defense" />
+			<field name="damage" />
+		</record>
+	</base>
+	<break></break>
+	
+	<inventory limit="0" top_title="top">
+		<record>
+			<field name="name" css="width: 300px;" />
+			<field name="quantity" />
+		</record>
+	</inventory>
+	
+</charsheet>

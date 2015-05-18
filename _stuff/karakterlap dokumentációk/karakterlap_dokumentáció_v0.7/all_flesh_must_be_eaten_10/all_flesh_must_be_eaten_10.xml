@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<charsheet>
+	
+	<top_pic display="design" css="margin-left: 202px; width: 604px; background: url('http://images3.wikia.nocookie.net/__cb20100507162909/peanutsrpgs/images/3/33/Zombiesnight.jpg') center center; height: 30px;" />
+	
+	<base left_title="true" limit="1" left_title_css="background: url('http://gamershavenpodcast.com/wp-content/uploads/2010/12/afmbe-logo.gif') no-repeat center center;" left_title_width="202">
+		<record lower_label_css="width: 30px;" left_title="true" css="height: 40px;" left_title_width="200">
+			<field name="base_name" css="height: 40px; width: 402px; padding-top: 0px;" input_css="line-height: 40px; border: none; height: 40px;" />
+		</record>
+		<record lower_label_css="width: 30px;" left_title="true" css="height: 40px;" left_title_width="200">
+			<field name="character_type" css="height: 40px; width: 402px; padding-top: 0px;" input_css="line-height: 40px; border: none; height: 40px;" />
+		</record>
+		<record css="height: 62px; width: 602px;" lower_label_css="height: 20px; line-height: 20px;" lower_css="padding-top: 20px; height: 42px;" lower_input_css="border: none; height: 42px; line-height: 42px;">
+			<field name="character_points" css="width: 200px;" />
+			<field name="spent" css="width: 200px;" />
+			<field name="unspent" css="width: 202px;" />
+		</record>
+	</base>
+	
+	<primattr lower_label_css="width: 30px;" css="width: 806px; margin-top: 20px;" limit="1" left_title="true" left_title_width="202" left_title_css="border: none; background: none;" lower_css="width: 149px;" lower_input_css="border: none; height: 42px; line-height: 42px;">
+		<record left_title="true" left_title_width="151" css="height: 40px;">
+			<field name="str" css="height: 40px; padding-top: 0px;" />
+		</record>
+		<record left_title="true" left_title_width="151" css="height: 40px;">
+			<field name="int" css="height: 40px; padding-top: 0px;" />
+		</record>
+		<record left_title="true" left_title_width="151" css="height: 40px;">
+			<field name="dex" css="height: 40px; padding-top: 0px;" />
+		</record>
+		<record left_title="true" left_title_width="151" css="height: 40px;">
+			<field name="per" css="height: 40px; padding-top: 0px;" />
+		</record>
+		<record left_title="true" left_title_width="151" css="height: 40px;">
+			<field name="con" css="height: 40px; padding-top: 0px;" />
+		</record>
+		<record left_title="true" left_title_width="151" css="height: 40px;">
+			<field name="will" css="height: 40px; padding-top: 0px;" />
+		</record>
+	</primattr>
+	
+	<attrs limit="1" lower_label_css="width: 30px;" display="inline" css="width: 804px; margin-left: 202px; margin-top: 20px;" lower_css="height: 40px; width: 100px; padding-top: 0px;" lower_input_css="border: none; height: 42px; line-height: 42px;">
+		<record left_title="true" left_title_width="100" css="height: 40px;">
+			<field name="sex" />
+		</record>
+		<record left_title="true" left_title_width="100" css="height: 40px;">
+			<field name="age" />
+		</record>
+		<record left_title="true" left_title_width="100" css="height: 40px;">
+			<field name="height" />
+		</record>
+		<record left_title="true" left_title_width="100" css="height: 40px;">
+			<field name="weight" />
+		</record>
+		<record left_title="true" left_title_width="100" css="height: 40px;">
+			<field name="hair" />
+		</record>
+		<record left_title="true" left_title_width="100" css="height: 40px;">
+			<field name="eyes" />
+		</record>
+	</attrs>
+	
+	<qualities limit="0" display="inline" lower_input_css="border: none;" css="width: 604px; margin-left: 202px; margin-top: 20px;" top_title="true">
+		<record>
+			<field name="qualities_name" css="width: 281px;" />
+			<field name="qualities_points" css="width: 281px;" />
+		</record>
+	</qualities>
+	
+	<drawbacks limit="0" display="inline" lower_input_css="border: none;" css="width: 604px; margin-left: 202px; margin-top: 20px;" top_title="true">
+		<record>
+			<field name="drawbacks_name" css="width: 281px;" />
+			<field name="drawbacks_points" css="width: 281px;" />
+		</record>
+	</drawbacks>
+	
+	<skill limit="0" display="inline" lower_input_css="border: none;" css="width: 604px; margin-left: 202px; margin-top: 20px;" top_title="true">
+		<record>
+			<field name="skill_name" css="width: 281px;" />
+			<field name="skill_level" css="width: 281px;" />
+		</record>
+	</skill>
+	
+	<weapons limit="0" display="inline" lower_input_css="border: none;" css="width: 604px; margin-left: 202px; margin-top: 20px;" top_title="true">
+		<record>
+			<field name="type" css="width: 93px;" />
+			<field name="rateoffire" css="width: 93px;" />
+			<field name="attack" css="width: 93px;" />
+			<field name="damage" css="width: 93px;" />
+			<field name="damagebonus" css="width: 94px;" />
+			<field name="range" css="width: 96px;" />
+		</record>
+	</weapons>
+	
+	<posessions limit="0" display="inline" lower_label_css="width: 30px;" lower_input_css="border: none; height: 42px; line-height: 42px;" lower_css="height: 40px; padding-top: 0px;" css="width: 604px; margin-left: 202px; margin-top: 20px;" top_title="true">
+		<record css="height: 40px;">
+			<field name="posessions_note" css="width: 602px;" />
+		</record>
+	</posessions>
+	
+	<allies limit="0" display="inline" lower_label_css="width: 30px;" lower_input_css="border: none; height: 42px; line-height: 42px;" lower_css="height: 40px; padding-top: 0px;" css="width: 604px; margin-left: 202px; margin-top: 20px;" top_title="true">
+		<record css="height: 40px;">
+			<field name="allies_note" css="width: 602px;" />
+		</record>
+	</allies>
+	
+	<history limit="0" display="inline" lower_label_css="width: 30px;" lower_input_css="border: none; height: 42px; line-height: 42px;" lower_css="height: 40px; padding-top: 0px;" css="width: 604px; margin-left: 202px; margin-top: 20px;" top_title="true">
+		<record css="height: 40px;">
+			<field name="history_note" css="width: 602px;" />
+		</record>
+	</history>
+	
+	<bot_pic display="design" css="margin-left: 202px; width: 604px; background: url('http://images3.wikia.nocookie.net/__cb20100507162909/peanutsrpgs/images/3/33/Zombiesnight.jpg') center center; height: 30px;" />
+	
+</charsheet>

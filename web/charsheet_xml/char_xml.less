@@ -1,0 +1,67 @@
+*:focus {outline: none;}
+body {font-family: Arial; margin: 0px; padding: 0px;}
+img#ajax_loader {border: none; display: none; position: absolute; top: 5px; right: 5px; z-index: 99;}
+.error {
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	transition: all .5s ease;
+	color: #fff;
+	background: #D10000;
+}
+.valid {
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	transition: all .5s ease;
+}
+
+.to_block {display: block;}
+
+.base_left_title_padding {padding-left: 100px;}
+.base_right_title_padding {padding-right: 100px;}
+
+.clear {clear: both;}
+
+#charsheet {
+	/*div.display_inline {display: inline-block;}*/
+	div.record_wrapper {
+		position: relative; /*display: inline-block;*/
+		form {/*padding-right: 20px;*/ /*display: inline-block;*/ position: relative;}
+		form.insertform {
+			padding-right: 40px;
+			div.record_insert {position: absolute; right: 0px; width: 40px; margin: -1px 0px; background: #129711; color: #000; font: 20px/40px Arial; text-align: center; height: 100%; z-index: 98; border-top: 1px solid #000; border-bottom: 1px solid #000;}
+			div.record_insert:hover {cursor: pointer;}
+		}
+		form.to_copy {display: none;}
+		div.record_delete {margin: -1px 0px; text-align: center; border-top: 1px solid #000; border-bottom: 1px solid #000; z-index: 98; color: #000; font: 20px/40px Arial; visibility: visible; background: rgb(50,0,0); position: absolute; right: 0px; width: 40px; height: 100%;}
+		div.record_delete:hover {cursor: pointer;}
+		div.title {overflow: hidden; position: absolute; top: 0px; left: 0px; background: #000; color: #fff; line-height: 40px; text-align: center; font-size: 20px; margin: 0px; padding: 0px; width: 100px; height: 100%;}
+		
+		div.horizontal_title_wrapper {display: inline-block;}
+		div.vertical_title_wrapper {position: relative;}
+		
+		div.horizontal_title {overflow: hidden;background: #000; color: #fff; text-align: center; font: 20px/40px Arial; margin: 0px; padding: 0px; width: 100%; height: 40px;}
+		div.vertical_left_title, div.vertical_right_title {overflow: hidden; position: absolute; top: 0px; background: #000; color: #fff; text-align: center; font: 20px/40px Arial; margin: 0px; padding: 0px; width: 100px; height: 100%;}
+		div.vertical_left_title {left: 0;}
+		div.vertical_right_title {right: 0;}
+		
+		div.char_container {
+			position: relative; overflow: hidden; display: inline-block; border: 1px solid #000;
+			div.field {
+				position: relative; width: 100px; height: 25px; padding-top: 15px; line-height: 25px; font-size: 15px; text-align: center; overflow: hidden; float: left; white-space: nowrap;
+				div.label {
+					overflow: hidden; whitespace: nowrap; position: absolute; top: 0px; left: 0px; width: 100%; height: 15px; font-size: 12px; font-weight: bold; line-height: 15px; text-align: center; 
+					input[type=checkbox] {position: absolute; top: 0px; left: 0px;}
+				}
+				input[type=text] {height: 100%; line-height: 100%; width: 100%; border: none; font-size: 15px; text-align: center;}
+				input[type=text]:focus, input[type=text]:hover {border: 1px solid #D6D6D6;}
+			}
+			
+			div.field.in_title {position: absolute; top: 0px; left: 0px; background: #000; color: #fff; line-height: 40px; text-align: center; font-size: 20px; margin: 0px; padding: 0px; height: 100%;}
+			
+			div.field.in_title_left {position: absolute; top: 0px; left: 0px; background: #000; color: #fff; line-height: 40px; text-align: center; font-size: 20px; margin: 0px; padding: 0px; height: 100%; width: 100px;}
+			div.field.in_title_top {position: absolute; top: 0px; left: 0px; background: #000; color: #fff; line-height: 40px; text-align: center; font-size: 20px; margin: 0px; padding: 0px; height: 40px; width: 100%;}
+			div.field.in_title_right {position: absolute; top: 0px; right: 0px; background: #000; color: #fff; line-height: 40px; text-align: center; font-size: 20px; margin: 0px; padding: 0px; height: 100%; width: 100px;}
+			div.field.in_title_bot {position: absolute; bottom: 0px; left: 0px; background: #000; color: #fff; line-height: 40px; text-align: center; font-size: 20px; margin: 0px; padding: 0px; height: 40px; width: 100%;}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+
+<filesMatch .ini$>
+  order deny,allow
+  deny from all
+</filesMatch>
+
+<filesMatch validate_(.*).ini$>
+  order deny,allow
+  allow from all
+</filesMatch>
+
+RewriteEngine On
+
+#A regi 'rpg.hv-web.hu'-rol atiranyitunk a 'hv-web.hu/rpg'-re.
+RewriteCond %{HTTP_HOST} ^rpg\.hv-web\.hu$ [NC]
+RewriteRule ^(.*)$ http://hv-web.hu/rpg/$1 [R=301,L]
+
+#www-rol http://-re valtunk. (Ha sajat domain lenne, itt a '/rpg/' reszt elhagynank
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/rpg/$1 [R=301,L]
+
+Options +FollowSymLinks
+#  Rules
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php
+#RewriteBase /

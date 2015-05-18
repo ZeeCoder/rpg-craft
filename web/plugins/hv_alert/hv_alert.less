@@ -1,0 +1,38 @@
+/*Base Border*/
+.bborder(@width: 1px) {
+	border: @width solid #000;
+}
+/*Basic Hover*/
+.hover() {
+	cursor: pointer;
+}
+
+div#hv_alert_wrapper {
+	z-index: 9000; position: fixed; top: 50px; left: 50%; width: 350px;
+	margin-left: -175px; height: 180px; display: none; background: #fff; .bborder();
+	
+	div.title {
+		height: 30px; border-bottom: 1px solid #000;
+		padding-bottom: 5px; margin-bottom: 5px;
+		font: 16px/30px Arial;
+		text-align: center;
+	}
+	div.content { height: 100px; overflow: hidden; overflow-y: auto; }
+	div.buttons {
+		height: 30px; border-top: 1px solid #000;
+		padding-top: 5px; margin-top: 5px;
+		div.button {
+			float: left; display: inline-block;
+			height: 21px; .bborder(); font: 16px/23px Arial;
+			margin: 0 4px; padding: 0 4px;
+		}
+		div.button:hover {
+			font-weight: bold; .hover();
+		}
+		div.button.inactive { display: none; }
+	}
+}
+
+div#hv_alert_wrapper.active {
+	display: block;
+}

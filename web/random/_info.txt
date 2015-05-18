@@ -1,0 +1,9 @@
+A lekérdezéseket bitekben korlátozzák, 1 millió kezdéskép, illetve napi 200.000-es korlát megújítás van ip-nként. (Adódhat ajándék-bit is szerver terheltségtől függően.) Számoljunk az utóbbival.
+Egy darab egyjegyű szám lekérése esetén a visszatérés plain formátumban (amiben majd mindig lekérem) 2 bájt = 16 bit. Mivel újsor is van a végén. Kétjegyű szám esetén ez  3 bájt lehet. Számoljunk az utóbbi, rosszabb esettel.
+Így legrosszabb esetben 200000/24= 8333,3...~8300 kockagurításra lesz lehetőség.
+
+Ötlet megoldásra: valódi véletlen számokat használ a rendszer mindaddig, amíg ez lehetséges, majd ha túllépjük a korlátot, beállít egy txt-t 0-ra, hogy a valódi számgeneráló nem használható tovább, majd erről tájékoztatja a usert is.
+
+Ezt az ellenőrzést a dobáskor végzi el (Nem valami háttérfolyamatként.) és ha átléptük a korlátot, dobás helyett figyelmeztet, hogy biztosan pseudo-random számot akarunk-e használni? Ha igen, onnantól kezdve enged szó nélkül gépi randomot használni.
+
+A txt pedig egy szerveren időzített php segítségével napi rendszerességgel visszaállítódik 1-re, de ettől függetlenül figyeljük a visszatérést, hátha hibát dob valamiért.

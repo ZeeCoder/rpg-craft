@@ -1,0 +1,88 @@
+.example_11_first_entry_css {text-align: center !important; height: 30px !important; background: #878787 !important; width: 100% !important; margin-bottom: 20px !important; font: 14px/30px Arial !important; color: #fff !important;}
+.example_11_base_left_title {background: #123123 !important; width: 50px !important;width: 20px !important;}
+.example_11_base_left_title:hover {background: #fff !important;}
+.example_11_base_title_padding {padding-left: 20px !important;padding-right: 180px !important;}
+.example_11_base_right_title {width: 180px !important;}
+.example_11_base_top_title {height: 60px !important;}
+.example_11_base_bot_title {height: 5px !important;}
+.example_11_base_css {background: #555 !important;}
+.example_11_base_css:hover {background: #fff !important;}
+.example_11_base_display {display: inline-block !important;}
+.example_11_base_record_0_css {height: 100px !important; width: 600px !important; background: #FF0000 !important;}
+.example_11_base_record_0_css:hover {background: #FFFF00 !important;}
+.example_11_base_field_0_0_css {height: 100px !important;width: 200px !important; background: #001CFF !important;}
+.example_11_base_field_0_0_css:hover {background: #0DA7FF !important;}
+.example_11_base_field_0_0_label_css {background: #C28825 !important;}
+.example_11_base_field_0_0_label_css:hover {background: #CF6D32 !important;}
+.example_11_base_field_0_0_input_css {background: #A75BAB !important;height: 100px !important; background: #D9D734 !important;}
+.example_11_base_field_0_0_input_css:hover {background: #C24993 !important; border: none !important;}
+.example_11_base_field_0_1_css {height: 100px !important;}
+.example_11_base_field_0_1_label_css {background: #C28825 !important;background: #fff !important;}
+.example_11_base_field_0_1_label_css:hover {background: #CF6D32 !important;background: #000 !important;}
+.example_11_base_field_0_1_input_css {background: #A75BAB !important;height: 100px !important; background: #D9D734 !important;}
+.example_11_base_field_0_1_input_css:hover {background: #C24993 !important; border: none !important;}
+.example_11_base_field_0_2_css {height: 100px !important;}
+.example_11_base_field_0_2_label_css {background: #C28825 !important;}
+.example_11_base_field_0_2_label_css:hover {background: #CF6D32 !important;}
+.example_11_base_field_0_2_input_css {background: #A75BAB !important;height: 100px !important; background: #D9D734 !important;background: #9E88AB !important; border: none !important;}
+.example_11_base_field_0_2_input_css:hover {background: #C24993 !important; border: none !important;background: #C1B9C2 !important; border: none !important;}
+.example_11_base_field_0_3_css {height: 100px !important;}
+.example_11_base_field_0_3_label_css {background: #C28825 !important;}
+.example_11_base_field_0_3_label_css:hover {background: #CF6D32 !important;}
+.example_11_base_field_0_3_input_css {background: #A75BAB !important;height: 100px !important; background: #D9D734 !important;}
+.example_11_base_field_0_3_input_css:hover {background: #C24993 !important; border: none !important;}
+.example_11_base_field_0_4_css {height: 100px !important;}
+.example_11_base_field_0_4_label_css {background: #C28825 !important;}
+.example_11_base_field_0_4_label_css:hover {background: #CF6D32 !important;}
+.example_11_base_field_0_4_input_css {background: #A75BAB !important;height: 100px !important; background: #D9D734 !important;}
+.example_11_base_field_0_4_input_css:hover {background: #C24993 !important; border: none !important;}
+.example_11_base_record_1_css {background: #123456 !important;}
+.example_11_base_record_1_css:hover {background: #FF0000 !important;}
+.example_11_base_record_1_left_title:hover {background: #C00 !important;}
+.example_11_base_record_1_left_title {width: 20px !important;}
+.example_11_base_record_1_title_padding {padding-left: 20px !important;padding-right: 40px !important;}
+.example_11_base_record_1_right_title {width: 40px !important;}
+.example_11_base_record_1_top_title {height: 30px !important;}
+.example_11_base_record_1_bot_title {height: 50px !important;}
+.example_11_base_field_1_0_css {height: 100px !important;}
+.example_11_base_field_1_0_label_css {background: #C28825 !important;}
+.example_11_base_field_1_0_label_css:hover {background: #CF6D32 !important;}
+.example_11_base_field_1_0_input_css {background: #A75BAB !important;height: 100px !important; background: #D9D734 !important;}
+.example_11_base_field_1_0_input_css:hover {background: #C24993 !important; border: none !important;}
+.example_11_base_field_1_0_visibility_css {background: #0BD92F !important;}
+.example_11_base_field_1_0_visibility_css:hover {background: #5CAB1B !important;}
+.example_11_base_field_1_1_css {height: 100px !important;background: #001CFF !important;}
+.example_11_base_field_1_1_css:hover {background: #0DA7FF !important;}
+.example_11_base_field_1_1_label_css {background: #C28825 !important;}
+.example_11_base_field_1_1_label_css:hover {background: #CF6D32 !important;}
+.example_11_base_field_1_1_input_css {background: #A75BAB !important;height: 100px !important; background: #D9D734 !important;}
+.example_11_base_field_1_1_input_css:hover {background: #C24993 !important; border: none !important;}
+.example_11_inventory_left_title {background: #987987 !important;}
+.example_11_inventory_css {background: #999 !important;}
+.example_11_inventory_css:hover {background: #333 !important;}
+.example_11_inventory_display {display: inline-block !important;}
+.example_11_inventory_record_0_css {background: #FFFF00 !important;}
+.example_11_inventory_record_0_css:hover {background: #FF0000 !important;}
+.example_11_inventory_record_0_left_title:hover {background: #C00 !important;}
+.example_11_inventory_record_0_left_title {width: 20px !important;}
+.example_11_inventory_record_0_title_padding {padding-left: 20px !important;padding-right: 40px !important;}
+.example_11_inventory_record_0_right_title {width: 40px !important;}
+.example_11_inventory_record_0_top_title {height: 30px !important;}
+.example_11_inventory_record_0_bot_title {height: 50px !important;}
+.example_11_inventory_field_0_0_visibility_css {background: #0BD92F !important;}
+.example_11_inventory_field_0_0_visibility_css:hover {background: #5CAB1B !important;}
+.example_11_inventory_field_0_1_css {background: #001CFF !important;}
+.example_11_inventory_field_0_1_css:hover {background: #0DA7FF !important;}
+.example_11_inventory_record_1_css {background: #123456 !important;}
+.example_11_inventory_record_1_css:hover {background: #FF0000 !important;}
+.example_11_inventory_record_1_left_title:hover {background: #C00 !important;}
+.example_11_inventory_record_1_left_title {width: 20px !important;}
+.example_11_inventory_record_1_title_padding {padding-left: 20px !important;padding-right: 40px !important;}
+.example_11_inventory_record_1_right_title {width: 40px !important;}
+.example_11_inventory_record_1_top_title {height: 30px !important;}
+.example_11_inventory_record_1_bot_title {height: 50px !important;}
+.example_11_inventory_field_1_0_visibility_css {background: #0BD92F !important;}
+.example_11_inventory_field_1_0_visibility_css:hover {background: #5CAB1B !important;}
+.example_11_inventory_field_1_1_css {background: #001CFF !important;}
+.example_11_inventory_field_1_1_css:hover {background: #0DA7FF !important;}
+.example_11_second_entry_css {text-align: center !important; height: 30px !important; background: #878787 !important; width: 100% !important; margin-top: 20px !important; font: 14px/30px Arial !important; color: #fff !important;}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<charsheet border="none" max-width="" min-width="" max-height="" min-height="" background="">
+	
+	<first_entry display="design" css="text-align: center; height: 30px; background: #878787; width: 100%; margin-bottom: 20px; font: 14px/30px Arial; color: #fff;"></first_entry>
+	
+	<base display="inline" lower_input_css="background: #A75BAB;" lower_input_hover_css="background: #C24993; border: none;" lower_label_css="background: #C28825;" lower_label_hover_css="background: #CF6D32;" css="background: #555;" hover_css="background: #fff;" limit="1" left_title="base" left_title_width="20" right_title_width="180" bot_title_height="5" top_title_height="60" right_title="base" top_title="base" bot_title="base" left_title_css="background: #123123; width: 50px;" left_title_hover_css="background: #fff;">
+		<record lower_css="height: 100px;" lower_input_css="height: 100px; background: #D9D734;" css="height: 100px; width: 600px; background: #FF0000;" hover_css="background: #FFFF00;" left_title="base" right_title="base" top_title="base" bot_title="base">
+			<field name="base_name" css="width: 200px; background: #001CFF;" hover_css="background: #0DA7FF;" />
+			<field name="xp" label_css="background: #fff;" label_hover_css="background: #000;" />
+			<field name="hit_points" input_css="background: #9E88AB; border: none;" input_hover_css="background: #C1B9C2; border: none;" />
+			<field name="defense" />
+			<field name="damage" />
+		</record>
+		<record css="background: #123456;" hover_css="background: #FF0000;" left_title_hover_css="background: #C00;" left_title="inv" right_title="inv" top_title="inv" bot_title="inv" left_title_width="20" top_title_height="30" right_title_width="40" bot_title_height="50">
+			<field name="asd" visibility_css="background: #0BD92F;" visibility_hover_css="background: #5CAB1B;" />
+			<field name="wre" css="background: #001CFF;" hover_css="background: #0DA7FF;" />
+		</record>
+	</base>
+	
+	<inventory display="inline" css="background: #999;" hover_css="background: #333;" limit="0" left_title="inv" right_title="inv" top_title="inv" bot_title="inv" left_title_css="background: #987987;">
+		<record css="background: #FFFF00;" hover_css="background: #FF0000;" left_title_hover_css="background: #C00;" left_title="inv" right_title="inv" top_title="inv" bot_title="inv" left_title_width="20" top_title_height="30" right_title_width="40" bot_title_height="50">
+			<field name="inv_name" visibility_css="background: #0BD92F;" visibility_hover_css="background: #5CAB1B;" />
+			<field name="quantity" css="background: #001CFF;" hover_css="background: #0DA7FF;" />
+		</record>
+		<record css="background: #123456;" hover_css="background: #FF0000;" left_title_hover_css="background: #C00;" left_title="inv" right_title="inv" top_title="inv" bot_title="inv" left_title_width="20" top_title_height="30" right_title_width="40" bot_title_height="50">
+			<field name="asd" visibility_css="background: #0BD92F;" visibility_hover_css="background: #5CAB1B;" />
+			<field name="wre" css="background: #001CFF;" hover_css="background: #0DA7FF;" />
+		</record>
+	</inventory>
+	
+	<second_entry display="design" css="text-align: center; height: 30px; background: #878787; width: 100%; margin-top: 20px; font: 14px/30px Arial; color: #fff;"></second_entry>
+	
+</charsheet>

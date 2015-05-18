@@ -1,0 +1,267 @@
+@charset "utf-8";
+/**
+	@author: Hubert Viktor
+	@since: 2012
+	A játékra vonatkozó css szabályok.
+*/
+
+* > textarea {resize: none;}
+
+.baseBorder () {
+	border: 1px solid #000;
+}
+.rounded (@radius: 5px) {
+	border-radius: @radius;
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+}
+
+#hv_alert_wrapper {
+	div.title:active { background: rgba(0, 0, 0, 0.5); }
+	div.title:hover { cursor: pointer; }
+}
+
+.x {width: 20px; height: 20px; font: 16px/20px Arial, Helvetica, sans-serif; text-align: center; position: absolute; right: 5px; top: 5px;}
+.x:hover {cursor: pointer;}
+
+#ping_wrapper {
+	z-index: 1011; background: #fff; width: 100px; height: 30px; font: 12px/30px Arial, Helvetica, sans-serif; text-align: center; .baseBorder(); position: absolute; left: 50%; top: 0; margin-left: -50px;
+	div.manual {
+		background: #2EB800; height: 28px; position: absolute; width: 10px; left: 0; top: 0;
+		border-right: 1px solid #000; height: 30px;
+	}
+	div.manual.off_now {
+		background: #7A7A7A;
+	}
+	div.manual_sync_now {
+		position: absolute; left: 10px; top: 0; width: 0; border: 0px solid #000; height: 28px;
+		background: url(../img/refresh.png) no-repeat center center; opacity: .5;
+	}
+	div.manual_sync_now:active { opacity: 1; }
+	div.manual:hover, div.manual_sync_now:hover {cursor: pointer;}
+}
+
+.box-shadow(@style, @c) when (iscolor(@c)) {
+  box-shadow:         @style @c;
+  -webkit-box-shadow: @style @c;
+  -moz-box-shadow:    @style @c;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+  .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+.disable {top: 0px; left: 0px; display: none; position: absolute; height: 100%; width: 100%; z-index: 11; background: #000; background: rgba(0,0,0,0.4);}
+
+div.dragger {position: absolute; height: 20px; width: 20px; top: 5px; right: 5px; background: url('../img/dragger.png'); z-index: 10;}
+div.dragger:active { background-image: url('../img/dragger_active.png'); }
+div.dragger:hover { cursor: pointer; }
+
+#mapimg { position: relative; }
+#mapimg:hover { cursor: move; }
+
+#hiddenFrame {position: absolute; width: 0px; height: 0px; border: none;}
+#add_new_entry_wrapper, #show_entry_wrapper {
+	display: none; background: #fff; height: 480px; width: 400px; border: 1px solid #000; .rounded(5px); position: fixed; z-index: 1200; top: 50%; left: 50%; margin-left: -200px; margin-top: -200px;
+	div.entrypics_wrap {
+		overflow: hidden; overflow-x: auto; height: 62px; margin: 0px 10px;
+		div#entrypics_cont {
+			height: 42px;
+			div.entrypic {
+				float: left; display: inline-block; margin: 5px; .baseBorder(); position: relative; height: 30px; width: 30px;
+				.del_entrypic {position: absolute; display: inline-block; right: 0; top: 0; width: 5px; height: 5px; background: rgb(0,0,0); background: rgba(0,0,0, 0.5); border: 1px solid #fff;}
+				.del_entrypic:hover {cursor: pointer; background: rgb(0,0,0);}
+			}
+			div:hover {cursor: pointer; border: 1px solid #CCC;}
+		}
+	}
+	div.selecting {
+		div.selectable_list_wrap {
+			overflow: hidden; overflow-x: auto; height: 40px; margin: 0px 10px;
+			div.selectable_list_cont {
+				height: 40px;
+				span#privacy_group {display:none;}
+				div {display: inline-block;}
+			}
+		}
+	}
+	div.updating {position: absolute; height: 20px; width: 20px; line-height: 20px; font-size: 20px; top: 10px; right: 80px;}
+	div.updating:hover {text-decoration: underline; cursor: pointer;}
+	div.title, input[name=title] {height: 50px !important; line-height: 50px; text-align: center; font-weight: bold;}
+	input[name=title], textarea[name=desc] {display: inline-block; width: 400px; margin: 0; padding: 0; border: none;}
+	input[name=title] {margin-top: 10px;}
+	div.desc, textarea[name=desc] {height: 260px; overflow-y: auto; margin: 0px 10px;}
+	textarea[name=desc] {width: 380px; margin-bottom: 10px; height: 300px;}
+	div.submit {text-align: center;}
+	div.submit:hover {text-decoration: underline; cursor: pointer;}
+	div.exit {position: absolute; height: 20px; width: 20px; line-height: 20px; font-size: 20px; top: 10px; right: 40px;}
+	div.exit:hover {cursor: pointer;}
+}
+#allWrapper {
+	background: url(../img/b.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#loading_screen {
+	color: #fff; position: fixed; left: 0px; top: 0px; height: 100%; width: 100%; background: #000; z-index: 2000;
+	.title {font-size: 40px; font-weight: 600; height: 50px; line-height: 50px; width: 200px; text-align: center; margin-left: -100px; margin-top: -25px; position: absolute; top: 50%; left: 50%; font-variant: small-caps;}
+	.gm_offline {
+		position: absolute; margin-left: -150px; left: 50%; margin-top: -20px; top: 50%; width: 300px; font-size: 18px; height: 40px; text-align: center; display: none; line-height: 20px;
+		div {text-decoration: underline; position: absolute; bottom: 0px; left: 0px; width: 100%; height: 20px; font-size: 18px; text-align: center; line-height: 20px;}
+		div:hover {cursor: pointer;}
+	}
+}
+/*Chat*/
+/*
+#chatWrapper {height: 148px; border: 1px solid #292825; width: 648px;}
+.chatBox {background: #FFF; border: 1px solid #292825; position: relative; font-size: 14px; width: 628px; margin: 5px; padding: 5px; height: 91px; overflow: hidden;}
+#chatMessages {width: 628px; max-height: 91px; margin: 5px 0px; position: absolute; bottom: 0px; overflow-x: hidden; overflow-y: auto;}
+#chatForm {background: #FFF; border: none; width: 638px; margin: 5px; margin-top: 0px;}
+#chatForm input {background: url('../img/chatSend.png') no-repeat 617px center; border: 1px solid #292825; width: 608px; height: 25px; font-size: 16px; padding: 2px 5px; padding-right: 25px;}
+.chatNick {color: #9E9E9E; font-weight: 600;}
+.chatLineWrapper .chatDate {color: #9E9E9E; font-size: 12px; display: none;}
+.chatLineWrapperHover .chatDate {color: #9E9E9E; font-size: 12px; display: inline;}
+.ui-resizable-helper { border: 2px dotted #fff; z-index: 9000;}
+*/
+/*CharSheet  .box-shadow(0 0 20px, 70%);*/
+#character_sheet {
+	background: #362F35; background: rgba(50,50,50,0.8); z-index: 1100; display: none; position: fixed; left: 50%; top: 50%; height: 80%; width: 80%; /*border: 1px solid #000;*/ .rounded(10px); padding: 5px;
+	div.x {z-index: 1101; font-weight: 600; position: absolute; top: 10px; right: 40px; height: 20px; width: 20px; text-align: center; line-height: 20px; font-size: 20px;}
+	div.dragger {z-index: 1101;}
+	div.x:hover {cursor: pointer;}
+	div.wrapper {
+		background: #fff; height: 100%; width: 100%; /*border: 1px solid #000;*/ .rounded(10px); overflow: auto;
+		div.content {/*height: 100%; width: 100%;*/padding: 5px; .rounded(10px);}
+		div.empty {line-height: 200px; font-size: 30px; font-weight: 20px; position: absolute; height: 100%; width: 100%; display: none; text-align: center;}
+	}
+}
+
+/*Game*/
+.ui-resizable-s {background: url('../img/dragger_ns.png') no-repeat center center; bottom: 0px;}
+.ui-resizable-e {background: url('../img/dragger_we.png') no-repeat center center; right: 0px;}
+.ui-resizable-n {background: url('../img/dragger_ns.png') no-repeat center center; top: 0px;}
+.ui-resizable-w {background: url('../img/dragger_we.png') no-repeat center center; left: 0px;}
+.ui-resizable-se {z-index: 99999 !important;}
+.ui-resizable-sw {z-index: 99999 !important;}
+.ui-resizable-ne {z-index: 99999 !important;}
+.ui-resizable-nw {z-index: 99999 !important;}
+#allWrapper {
+	.baseBorder; width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; min-width: 1000px; min-height: 500px;
+	#info {
+		background: #fff; z-index: 1020; width: 400px; .baseBorder(); height: 30px; margin-left: -200px; margin-top: -15px; left: 50%; bottom: 0; position: absolute;
+		div:not(.dragger) {float: left; display: inline-block; height: 30px; text-align: center; overflow: hidden; font: 12px/30px Arial, Helvetica, sans-serif;}
+		div:not(.dragger):hover {cursor: pointer; background: #DEDEDE;}
+		div.game_desc_short {width: 290px;}
+		div.charsheet_desc_short {width: 110px;}
+	}
+	#desc_container {
+		overflow-y: auto;background: #fff; z-index: 1020; display: none; width: 500px; .baseBorder(); height: 400px; margin-left: -250px; margin-top: -200px; left: 50%; top: 50%; position: absolute;
+		div.desc_cont {display: none;}
+		div.x {right: 30px;}
+	}
+	#friends_to_invite {
+		background: #fff; z-index: 1020; display: none; width: 500px; .baseBorder(); height: 400px; margin-left: -250px; margin-top: -200px; left: 50%; top: 50%; position: absolute;
+		div.not_invited_yet, div.already_invited {
+			width: 250px; float: left; display: inline-block; overflow-y: auto; height: 400px;
+			div {height: 20px; margin: 5px auto 5px; text-align: center; overflow: hidden; font: 16px/20px Arial, Helvetica, sans-serif;}
+			div:hover {background: #DEDEDE; cursor: pointer;}
+		}
+		div.not_invited_yet {}
+		div.already_invited {}
+	}
+	.diceWrapper {
+		.baseBorder; background: #fff; z-index: 1009; width: 100px; height: 100px; position: absolute; bottom: 0px; left: 0px; overflow: hidden;
+		input {width: 80px; position: absolute; left: 10px; height: 20px; line-height: 20px; font-size: 16px; text-align: center;}
+		.first {top: 15px;}
+		.second {top: 45px;}
+		input[type='button'] {top: 75px;}
+	}
+	.gmWrapper {.baseBorder; background: #fff; z-index: 1010; width: 300px; height: 100px; position: absolute; top: 0px; left: 0px;}
+	.chatWrapper {
+		border: 1px solid #292825; background: #fff; z-index: 1011; width: 300px; height: 300px; position: absolute; top: 50%; left: 0px; margin-top: -150px;
+		.chatBox {.rounded; background: #FFF; border: 1px solid #292825; position: relative; font-size: 14px; width: 280px; margin: 5px; padding: 5px; height: 245px; overflow: hidden;}
+		#chatMessages {width: 280px; max-height: 245px; margin: 5px 0px; position: absolute; bottom: 0px; overflow-x: hidden; overflow-y: auto;}
+		#chatForm {
+			background: #FFF; border: none; margin: 5px; margin-top: 0px;
+			input {.rounded; background: url('../img/chatSend.png') no-repeat right center; border: 1px solid #292825; width: 260px; height: 25px !important; line-height: 25px; font-size: 16px; padding: 0px 5px; padding-right: 25px;}
+		}
+		.chatNick {color: #9E9E9E; font-weight: 600;}
+		.chatLineWrapper .chatDate {color: #9E9E9E; font-size: 12px; display: none;}
+		.chatLineWrapperHover .chatDate {color: #9E9E9E; font-size: 12px; display: inline;}
+	}
+	div.eventsWrapper {
+		.baseBorder; background: #fff; width: 200px; position: absolute; right: 0px; top: 0px; height: 100% !important; z-index: 1009; overflow: hidden; overflow-y: auto;
+		right: 0px !important;
+		left: auto !important;
+		div.menu {text-align: center; height: 25px; line-height: 25px; font-size: 18px;}
+		div.title {
+			text-align: center; height: 25px; line-height: 25px; font-size: 22px; padding: 20px 0px 0px;
+			span:hover {cursor: pointer;}
+		}
+		div.menu:hover {background: #DED3D3; cursor: pointer;}
+		div.mapWrapper {
+			/*max-height: 200px;*/
+			overflow: hidden;
+			overflow-y: auto;
+			width: auto !important;
+			border-top: 1px solid black;
+			border-bottom: 1px solid black;
+			div.map_side {
+				font-size: 15px; height: 20px; line-height: 20px; text-align: center; position: relative; overflow: hidden;
+				div.x {text-align: center; position: absolute; height: 20px; width: 20px; line-height: 20px; font-size: 20px; top: 0px; right: 10px;}
+				div.x:hover {text-decoration: underline; cursor: pointer;}
+				div.map_name {background: no-repeat 5px center;}
+				div.map_name:hover {cursor: pointer; background-color: #DED3D3;}
+			}
+		}
+		div.entryWrapper {
+			/*max-height: 200px;*/
+			overflow: hidden;
+			overflow-y: auto;
+			border-top: 1px solid black;
+			border-bottom: 1px solid black;
+			div.entry_box {
+				position: relative; height: 20px;
+				div.entry {
+					font-size: 15px; height: 20px; line-height: 20px; text-align: center; position: relative; overflow: hidden;
+				}
+				div.entry:hover {cursor: pointer; background: #DED3D3;}
+				div.x {text-align: center; position: absolute; height: 20px; width: 20px; line-height: 20px; font-size: 20px; top: 0px; right: 10px;}
+				div.x:hover {text-decoration: underline; cursor: pointer;}
+			}
+		}
+	}
+	#gamersWrapper {
+		.baseBorder(); background: #fff; z-index: 1010; width: 200px; height: 60px; position: absolute; top: 0px; left: 0px; overflow: hidden; overflow-y: auto;
+		div.friend_inviter_btn {
+			.baseBorder(); width: 20px; height: 20px; right: 5px; top: 30px; background: #fff; position: absolute;
+			text-align: center; font: bold 16px/22px Arial, Helvetica, sans-serif;
+		}
+		div.friend_inviter_btn:active { background: rgba(0, 0, 0, 0.5); }
+		div.friend_inviter_btn:hover {cursor: pointer;}
+		div.gamers_content {
+			height: 100%;
+			overflow: hidden;
+			overflow-y: auto;
+			margin-right: 30px;
+		}
+		div.gamer {width: 100%; text-align: center; overflow: hidden; font-size: 14px; line-height: 30px; float: left; display: inline-block; height: 30px;}
+		div.gamer.to_hover:hover {text-decoration: underline; cursor: pointer; background: #DED3D3;}
+	}
+	.owngamerWrapper {
+		.baseBorder; background: #fff; z-index: 1010; width: 300px; height: 100px; position: absolute; bottom: 0px; left: 0px;
+		div.open_char:hover {cursor: pointer;}
+	}
+	.ownerTimeout {text-align: center; color: #FFF; font-weight: 600; width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.8); z-index: 1011;}
+	.map {
+		position: absolute; top: 0px; left: 0px; z-index: 0; width: 100%; height: 100%;
+		.container{
+			.baseBorder; padding: 10px; display: block; border-radius: 10px;
+			min-height: 75px; min-width: 75px;
+			position: absolute; top: 0px; left: 0px; background: rgba(0,0,0,0.5); 
+			img { .baseBorder; min-height: 75px; min-width: 75px; }
+		}
+		.container:active { background: rgba(0,0,0,0.8); }
+	}
+}
