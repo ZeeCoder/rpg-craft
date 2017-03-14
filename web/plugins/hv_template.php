@@ -112,7 +112,7 @@
 			
 			define( 'USER_RIGHT', $this->c['user_right'] );
 			
-			$full_title = $this->c['title_prefix'].$this->get_title().$this->c['title_suffix'];
+			$full_title = @$this->c['title_prefix'].$this->get_title().@$this->c['title_suffix'];
 			/*Set up header*/
 			echo "
 				<html xmlns='http://www.w3.org/1999/xhtml'>
@@ -169,8 +169,8 @@
 			*/
 			
 			if (
-				($c['langsupport'] && $this->c['pages'][PAGE_FILE_NAME][PAGE_LANG]['css']!=NULL) ||
-				(!$c['langsupport'] && $this->c['pages'][PAGE_FILE_NAME]['css']!=NULL)
+				($c['langsupport'] && @$this->c['pages'][PAGE_FILE_NAME][PAGE_LANG]['css']!=NULL) ||
+				(!$c['langsupport'] && @$this->c['pages'][PAGE_FILE_NAME]['css']!=NULL)
 				) {
 					
 				if (
@@ -211,7 +211,7 @@
 				}
 			}
 			/* Page Conditional JS that MUST be included in the header */
-			if ( $this->c['pages'][PAGE_FILE_NAME]['js_header']!=NULL ) {
+			if ( @$this->c['pages'][PAGE_FILE_NAME]['js_header']!=NULL ) {
 				if ( is_array( $this->c['pages'][PAGE_FILE_NAME]['js_header'] ) ) {
 					foreach ($this->c['pages'][PAGE_FILE_NAME]['js_header'] as $js_file) {
 						if ( is_file($js_file) )
@@ -249,8 +249,8 @@
 				
 			/* Page Conditional JS */
 			if (
-				($c['langsupport'] && $this->c['pages'][PAGE_FILE_NAME][PAGE_LANG]['js']!=NULL) ||
-				(!$c['langsupport'] && $this->c['pages'][PAGE_FILE_NAME]['js']!=NULL)
+				($c['langsupport'] && @$this->c['pages'][PAGE_FILE_NAME][PAGE_LANG]['js']!=NULL) ||
+				(!$c['langsupport'] && @$this->c['pages'][PAGE_FILE_NAME]['js']!=NULL)
 				) {
 					
 				if (
@@ -325,7 +325,7 @@
 			
 			$pagename = $this->get_page_filename();
 			if ( $c['langsupport'] )
-				$pageright = $this->c['pages'][$pagename][PAGE_LANG]['needed_right'];
+				$pageright = @$this->c['pages'][$pagename][PAGE_LANG]['needed_right'];
 			else
 				$pageright = $this->c['pages'][$pagename]['needed_right'];
 
@@ -375,25 +375,25 @@
 			$c = $this->c['rootObj']->get_config();
 			if ( $c['langsupport'] )
 				return
-					$this->c['pages'][PAGE_FILE_NAME][PAGE_LANG]['title_prefix']
+					@$this->c['pages'][PAGE_FILE_NAME][PAGE_LANG]['title_prefix']
 					.
 					$this->c['def_title']
 					.
-					$this->c['pages'][PAGE_FILE_NAME][PAGE_LANG]['title_suffix'];
+					@$this->c['pages'][PAGE_FILE_NAME][PAGE_LANG]['title_suffix'];
 			else
 				return
-					$this->c['pages'][PAGE_LANG]['title_prefix']
+					@$this->c['pages'][PAGE_LANG]['title_prefix']
 					.
 					$this->c['def_title']
 					.
-					$this->c['pages'][PAGE_LANG]['title_suffix'];
+					@$this->c['pages'][PAGE_LANG]['title_suffix'];
 		}
 		function get_desc() {
 			$c = $this->c['rootObj']->get_config();
 			if ( $c['langsupport'] )
-				$d = $this->c['pages'][PAGE_FILE_NAME][PAGE_LANG]['desc'];
+				$d = @$this->c['pages'][PAGE_FILE_NAME][PAGE_LANG]['desc'];
 			else
-				$d = $this->c['pages'][PAGE_LANG]['desc'];
+				$d = @$this->c['pages'][PAGE_LANG]['desc'];
 				
 			if ( $d=='' )
 				return $this->c['def_desc'];

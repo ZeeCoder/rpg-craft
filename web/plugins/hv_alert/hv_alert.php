@@ -36,7 +36,7 @@
 				echo '<div id="hv_alert_wrapper" class="'.$arr['type'].' '.( ( $show_alert ) ? 'active' : '' ).'"><div class="title">'.$arr['title'].'</div><div class="content">'.$arr['message'].'</div><div class="buttons"><div class="button ok '.(($arr['ok_btn'])?'':' inactive').'">'.$this->c['ok_text'].'</div><div class="button cancel">'.$this->c['cancel_text'].'</div></div></div>';
 				session_write_close();
 			} else
-				echo '<div id="hv_alert_wrapper"><div class="title">'.$arr['title'].'</div><div class="content"></div><div class="buttons"><div class="button ok '.(($arr['ok_btn'])?'':' inactive').'">'.$this->c['ok_text'].'</div><div class="button cancel">'.$this->c['cancel_text'].'</div></div></div>';
+				echo '<div id="hv_alert_wrapper"><div class="title">'.@$arr['title'].'</div><div class="content"></div><div class="buttons"><div class="button ok '.((@$arr['ok_btn'])?'':' inactive').'">'.$this->c['ok_text'].'</div><div class="button cancel">'.$this->c['cancel_text'].'</div></div></div>';
 		}
 		
 		function add_alert( $arr = array() ) {

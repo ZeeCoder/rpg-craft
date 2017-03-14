@@ -1,11 +1,13 @@
 <?php
+    error_reporting(0);
+
 	session_start();
-		$sess_user_name = $_SESSION['user_name'];
-		$sess_user_mail = $_SESSION['user_mail'];
-		$sess_user_born = $_SESSION['user_born'];
-		$sess_user_gender = $_SESSION['user_gender'];
-		$sess_saved_reg_data = $_SESSION['saved_reg_data'];
-			unset($_SESSION['saved_reg_data']);
+		$sess_user_name = @$_SESSION['user_name'];
+		$sess_user_mail = @$_SESSION['user_mail'];
+		$sess_user_born = @$_SESSION['user_born'];
+		$sess_user_gender = @$_SESSION['user_gender'];
+		$sess_saved_reg_data = @$_SESSION['saved_reg_data'];
+        unset($_SESSION['saved_reg_data']);
 		if(isset($_SESSION['user_id']))
 			$sess_user_id = $_SESSION['user_id'];
 
@@ -39,7 +41,7 @@
 	/*Nyelvi adatok betöltése*/
 		session_start();
 			$_SESSION['PAGE_ROOT'] = PAGE_ROOT;
-			$_SESSION['redirect_to'] = $_SERVER['REDIRECT_URL'];
+			$_SESSION['redirect_to'] = @$_SERVER['REDIRECT_URL'];
 
 			$_SESSION['lang'] = $hvt->get_lang();
 			$sess_lang = $hvt->get_lang();

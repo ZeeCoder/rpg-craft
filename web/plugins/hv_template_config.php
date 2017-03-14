@@ -1,6 +1,6 @@
 <?php
 	session_start();
-		$sess_user_rights = $_SESSION['user_rights'];
+		$sess_user_rights = @$_SESSION['user_rights'];
 	session_write_close();
 	
 	

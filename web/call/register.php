@@ -4,7 +4,8 @@
 	 *	@since: 2012
 	 *	Regisztráció, aktivációs kód kiküldése.
 	 */
-	
+    error_reporting(0);
+
 	session_start();
 		$sess_redirect_to = $_SESSION['redirect_to'];
 	session_write_close();
@@ -13,7 +14,7 @@
 	include_once( '../config_loader.php' );
 	include_once( '../plugins/hv_alert/hv_alert.php' );
 	$configini = parse_ini_file('../config.ini', true);
-	
+
 	$full_url = explode('/', $_SERVER['SERVER_PROTOCOL']);
 	$full_url = $full_url[0];
 	$full_url = strtolower( $full_url.'://'.$_SERVER['HTTP_HOST'].$configini['root'] );
@@ -59,6 +60,7 @@
 		
 		$query = "SELECT 1 FROM `users` WHERE `nick` = '$registerName' OR `mail` = '$registerMail' LIMIT 1";
 		$table = @mysql_query($query);
+
 		if (mysql_num_rows($table) > 0) {
 			$hva->add_alert( $l_config['register_existing_user'] );
 				session_start();
@@ -99,7 +101,6 @@
 				$headers .= "X-Mailer: PHP". phpversion() ."\r\n";
 				
 				$subject = "Aktivációs kód";
-				
 				if (mail($registerMail, $subject, $message, $headers, "-f".$configini['mail']))
 					$hva->add_alert( $l_config['register_succesful'] );
 				else {

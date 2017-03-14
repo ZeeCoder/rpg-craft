@@ -8,7 +8,7 @@
 	$given_pages = $hvt->c['pages'];
 	
 	foreach ( $menupoints as $name ) {
-		$authored = USER_RIGHT >= $given_pages[$name][PAGE_LANG]['needed_right'];
+		$authored = USER_RIGHT >= @$given_pages[$name][PAGE_LANG]['needed_right'];
 		if ( $authored ) {
 			$url = PAGE_URL_ROOT.$given_pages[$name][PAGE_LANG]['name'].'/';
 		?>
